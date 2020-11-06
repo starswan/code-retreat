@@ -8,8 +8,46 @@ module GameOfLife
   Point = Struct.new(:x, :y)
 
   class Grid
-    def initialize
-      @grid = {}
+    def initialize(grid)
+      @grid = grid
+    end
+
+    def tick
+      # create a new generation
+      # admit surviving cells
+      survivors = []
+      # iterate over each cell
+      @grid.each do |cell|
+        # cell ~ [1, 2]
+        if neighbours(cell) == 2 || neighbours(cell) == 3
+          survivors << cell
+        end
+      end
+      # for each cell
+      # count the neighbours
+      # if there are two or three neighbours, the cell survives
+
+      GameOfLife::Grid.new(survivors)
+    end
+
+    def neighbours(cell)
+      x, y = cell
+      # x - 1 y - 1
+      #
+      # [ [1,1], [0,0]  ]
+      total_neighbours = 0
+      # does the grid contain the cell at 0,0?
+      @grid
+
+    end
+
+    def population
+      @grid.length
+    end
+
+    def cells
+      @grid
     end
   end
 end
+
