@@ -11,5 +11,9 @@ module GameOfLife
     def initialize
       @grid = {}
     end
+
+    def size
+      0
+    end
   end
 end
