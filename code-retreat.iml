@@ -24,6 +24,7 @@
       <excludeFolder url="file://$MODULE_DIR$/public/system" />
       <excludeFolder url="file://$MODULE_DIR$/components" />
       <excludeFolder url="file://$MODULE_DIR$/elm-stuff" />
+      <excludePattern pattern="elm-stuff" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
